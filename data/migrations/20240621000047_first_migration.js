@@ -13,6 +13,13 @@ exports.up = async function(knex) {
         .unsigned()
         .defaultTo(0)
   })
+  .createTable('resources', table => {
+    table.increments('resource_id')
+    table.string('resource_name', 256)
+        .unique()
+        .notNullable()
+    table.string('resource_description')
+  })
 };
 
 /**
