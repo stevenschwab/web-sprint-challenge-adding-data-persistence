@@ -29,8 +29,8 @@ const tasks = [
     // project 2
     { task_description: "Task 1 for Project Beta", task_notes: "Notes for task 4", task_completed: 0, project_id: 2 },
     // project 3
-    { task_description: "Task 1 for Project Gamma", task_notes: "Notes for task 7", task_completed: 0, project_id: 3 },
-    { task_description: "Task 2 for Project Gamma", task_notes: "Notes for task 8", task_completed: 0, project_id: 3 },
+    { task_description: "Task 1 for Project Gamma", task_notes: "Notes for task 5", task_completed: 0, project_id: 3 },
+    { task_description: "Task 2 for Project Gamma", task_notes: "Notes for task 6", task_completed: 0, project_id: 3 },
 ]
 
 exports.seed = async function (knex) {
