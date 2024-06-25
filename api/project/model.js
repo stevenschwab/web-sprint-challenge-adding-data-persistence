@@ -17,12 +17,11 @@ async function insertProject(project) {
 
 async function getAllProjects() {
     let projects = await db('projects').select('*')
-    projects = projects.map(project => {
+    
+    return projects.map(project => {
         project.project_completed = project.project_completed ? true : false
         return project
     })
-    
-    return projects
 }
 
 module.exports = {
