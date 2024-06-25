@@ -2,6 +2,14 @@ const express = require('express')
 const ResourceModel = require('./model')
 const router = express.Router()
 
+router.get('/', (req, res, next) => {
+    ResourceModel.getAllResources()
+        .then(resources => {
+            res.json(resources)
+        })
+        .catch(next)
+})
+
 router.post('/', (req, res, next) => {
     ResourceModel.insertResource(req.body)
         .then(resource => {

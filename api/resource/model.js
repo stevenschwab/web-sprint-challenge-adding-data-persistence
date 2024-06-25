@@ -9,6 +9,11 @@ async function insertResource(resource) {
     return await getResourceById(resource_id)
 }
 
+async function getAllResources() {
+    return await db('resources').select('*')
+}
+
 module.exports = {
-    insertResource
+    insertResource,
+    getAllResources
 }
